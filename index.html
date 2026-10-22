@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المحامي عباس الحسن | خبير قانوني وقانون الشركات والعقارات</title>
+    <style>
+        :root {
+            --primary-color: #0b1f3f; /* أزرق ملكي رزين */
+            --secondary-color: #c5a059; /* ذهبي هادئ */
+            --bg-color: #f9f9fb;
+            --text-color: #333333;
+            --white: #ffffff;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.8;
+        }
+        header {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 2.5rem 1rem;
+            text-align: center;
+            border-bottom: 4px solid var(--secondary-color);
+        }
+        header h1 {
+            font-size: 2.3rem;
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            font-size: 1.1rem;
+            color: #d1d5db;
+        }
+        nav {
+            background: #112a46;
+            display: flex;
+            justify-content: center;
+            padding: 0.9rem;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        .section {
+            background: var(--white);
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            border-right: 4px solid var(--secondary-color);
+            padding-right: 10px;
+        }
+        /* أداة البحث الذكية */
+        .search-box {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .search-box input {
+            width: 80%;
+            max-width: 500px;
+            padding: 12px 20px;
+            font-size: 1rem;
+            border: 2px solid #ccc;
+            border-radius: 30px;
+            outline: none;
+            transition: 0.3s;
+        }
+        .search-box input:focus {
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 8px rgba(197, 160, 89, 0.3);
+        }
+        .search-results {
+            margin-top: 15px;
+            text-align: right;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .result-item {
+            background: #f1f5f9;
+            padding: 12px 15px;
+            margin-bottom: 8px;
+            border-radius: 5px;
+            display: none;
+            border-right: 3px solid var(--primary-color);
+        }
+        .contact-btn {
+            display: inline-block;
+            background: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+        .contact-btn:hover {
+            background: #b08d46;
+            color: var(--white);
+        }
+        /* زر الواتساب العائم */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            left: 25px;
+            background-color: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 32px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+        /* الخريطة */
+        .map-container {
+            margin-top: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        footer {
+            background: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- زر الواتساب العائم -->
+    <a href="https://wa.me/963944093408" class="whatsapp-float" target="_blank" title="تواصل عبر الواتساب">
+        💬
+    </a>
+
+    <header>
+        <h1>المحامي الأستاذ عباس الحسن</h1>
+        <p>خبير قانوني واختصاصي في قانون الشركات والعقارات | محامٍ بالاستئناف</p>
+    </header>
+
+    <nav>
+        <a href="#about">من نحن</a>
+        <a href="#search-section">الموسوعة والقوانين</a>
+        <a href="#articles">النصائح القانونية</a>
+        <a href="#contracts">النماذج والعقود</a>
+        <a href="#faq">الأسئلة الشائعة</a>
+        <a href="#contact">تواصل معنا</a>
+    </nav>
+
+    <div class="container">
+
+        <!-- أداة البحث السريعة في القوانين واجتهادات النقض -->
+        <div class="section" id="search-section">
+            <h2>موسوعة القوانين واجتهادات محكمة النقض (بحث فوري)</h2>
+            <p>ابحث عن أي قانون سوري أو اجتهاد نقضي (مدني، تجاري، جزائي، شرعية، تملك أجانب):</p>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="اكتب كلمة البحث هنا (مثلاً: شركة، إخلاء، تعويض، عقار)..." onkeyup="searchFunction()">
+            </div>
+            <div class="search-results" id="searchResults">
+                <div class="result-item" data-text="قانون الشركات السوري وتأسيس الشركات التجارية والتسجيل ومسؤولية المدير"><strong>قانون الشركات:</strong> تنظيم الشركات التجارية، المسؤوليات، وحل الشركات وتصفيتها.</div>
+                <div class="result-item" data-text="قانون تملك العرب والأجانب في الجمهورية العربية السورية والشروط والتراخيص"><strong>قانون تملك العرب والأجانب:</strong> الضوابط القانونية والتراخيص العقارية للاستثمار.</div>
+                <div class="result-item" data-text="اجتهاد محكمة النقض الغرفة التجارية النزاعات والشركات والكمبيالات والأوراق التجارية"><strong>اجتهاد محكمة النقض (التجارية):</strong> قرارات ناظمة لمنازعات الشركاء والأوراق التجارية.</div>
+                <div class="result-item" data-text="اجتهاد محكمة النقض الغرفة المدنية العقارات والملكية والتعويضات وفسخ العقود"><strong>اجتهاد محكمة النقض (المدنية):</strong> قرارات في قضايا الملكية والعقود والتعويض.</div>
+            </div>
+        </div>
+
+        <!-- نبذة تعريفية -->
+        <div class="section" id="about">
+            <h2>نبذة تعريفية</h2>
+            <p>يُعد المحامي <strong>عباس الحسن</strong> أحد أبرز الخبراء القانونيين على مستوى الجمهورية العربية السورية. يتميز باختصاص عميق ودقيق في <strong>قانون الشركات، العقارات، وتملك العرب والأجانب</strong>، مع خبرة واسعة في المرافعات أمام محاكم النقض بجميع غرفها (المدنية، التجارية، الجزائية، والشرعية).</p>
+        </div>
+
+        <!-- نصائح ومقالات قانونية -->
+        <div class="section" id="articles">
+            <h2>النصائح القانونية لرجال الأعمال والمستثمرين</h2>
+            <p><strong>خمس نصائح جوهرية قبل تأسيس شركة في سوريا:</strong></p>
+            <ul style="margin-right: 20px; margin-top: 10px;">
+                <li>اختيار الشكل القانوني الأمثل للشركة (محدودة المسؤولية، تضامن، إلخ).</li>
+                <li>صياغة النظام الأساسي وعقد التأسيس بعناية لتفادي النزاعات المستقبلية.</li>
+                <li>الامتثال الكامل للتشريعات الضريبية وقوانين الاستثمار النافذة.</li>
+                <li>إتمام كافة إجراءات السجل التجاري وغرفة التجارة أصولاً.</li>
+                <li>الاستعانة المبكرة بمستشار قانوني خبير لحماية رأس المال.</li>
+            </ul>
+        </div>
+
+        <!-- النماذج والعقود الاسترشادية -->
+        <div class="section" id="contracts">
+            <h2>النماذج والعقود الاسترشادية</h2>
+            <p>يوفر المكتب نماذج قانونية دقيقة ومدروسة لحماية حقوق الأطراف في مختلف المعاملات التجارية والعقارية:</p>
+            <ul style="margin-right: 20px; margin-top: 10px;">
+                <li>نموذج عقد تأسيس شركات ومذكرة تفاهم بين الشركاء.</li>
+                <li>عقود البيع والايجار العقاري وفق الأصول القانونية النافذة.</li>
+                <li>صيغ اتفاقيات الاستشارات القانونية وحماية السرية المهنية.</li>
+            </ul>
+        </div>
+
+        <!-- الأسئلة الشائعة -->
+        <div class="section" id="faq">
+            <h2>الأسئلة الشائعة (FAQ)</h2>
+            <p><strong>س: ما هي الأوراق المطلوبة لتأسيس شركة في سوريا؟</strong><br>ج: تتطلب الموافقة الأمنية، صياغة عقد التأسيس، فتح حساب برأس المال، والتسجيل أصولاً في السجل التجاري.</p>
+            <hr style="margin: 15px 0; border: 0; border-top: 1px solid #eee;">
+            <p><strong>س: هل يمكن للعرب والأجانب التملك العقاري؟</strong><br>ج: نعم، وفق شروط وقوانين دقيقة تتطلب تراخيص إدارية ومالية واضحة.</p>
+        </div>
+
+        <!-- تواصل معنا -->
+        <div class="section" id="contact" style="text-align: center;">
+            <h2>تواصل مع المكتب الرئيسي</h2>
+            <p><strong>العنوان:</strong> الجمهورية العربية السورية - ريف دمشق - السيدة زينب، دوار حجيرة</p>
+            <p><strong>الهاتف / واتساب:</strong> 00963944093408</p>
+            <p><strong>البريد الإلكتروني:</strong> Abbas.lawyer1977@gmail.com</p>
+            
+            <!-- خريطة توضيحية للموقع -->
+            <div class="map-container">
+                <iframe width="100%" height="250" style="border:0;" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3348.5!2d36.3!3d33.45!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zU2F5HjBkYSwgRmlmIERpbWFzaHEsIFN5cmlh!5e0!3m2!1sen!2s!4v1600000000000"></iframe>
+            </div>
+
+            <a href="https://wa.me/963944093408" class="contact-btn" target="_blank">تواصل عبر الواتساب مباشرة</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>جميع الحقوق محفوظة للمحامي عباس الحسن © 2026</p>
+    </footer>
+
+    <script>
+        // برمجية أداة البحث الفورية البسيطة
+        function searchFunction() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let items = document.getElementsByClassName('result-item');
+            
+            if(input.trim() === "") {
+                for (let i = 0; i < items.length; i++) {
+                    items[i].style.display = "none";
+                }
+                return;
+            }
+
+            for (let i = 0; i < items.length; i++) {
+                let text = items[i].getAttribute('data-text').toLowerCase();
+                if (text.includes(input)) {
+                    items[i].style.display = "block";
+                } else {
+                    items[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
