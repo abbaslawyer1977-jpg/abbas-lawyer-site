@@ -3,105 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مكتب الأستاذ عباس الحسن | المحامي وعضو نقابة المحامين في سوريا</title>
+    <title>المحامي عباس الحسن</title>
     <style>
         :root {
-            --primary: #1a2530;
-            --secondary: #c5a059;
+            --الأساسي: #1a2530;
+            --ثانوي: #c5a059;
             --light: #f8f9fa;
-            --dark: #111;
+            --داكن: #111;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: var(--light); color: #333; line-height: 1.6; }
-        header { background: var(--primary); color: #fff; padding: 2rem 1rem; text-align: center; border-bottom: 4px solid var(--secondary); }
-        header h1 { font-size: 2.2rem; margin-bottom: 0.5rem; color: var(--secondary); }
+        body { background-color: var(--light); color: var(--داكن); line-height: 1.6; }
+        header { background: var(--الأساسي); color: white; text-align: center; padding: 2.5rem 1rem; border-bottom: 4px solid var(--ثانوي); }
+        header h1 { font-size: 2.2rem; margin-bottom: 0.5rem; color: var(--ثانوي); }
         header p { font-size: 1.1rem; opacity: 0.9; }
         .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
         .search-box { width: 100%; padding: 1rem; font-size: 1.1rem; border: 2px solid #ddd; border-radius: 8px; margin-bottom: 2rem; outline: none; transition: border-color 0.3s; }
-        .search-box:focus { border-color: var(--secondary); }
-        .section-title { font-size: 1.5rem; margin-bottom: 1rem; color: var(--primary); border-bottom: 2px solid var(--secondary); padding-bottom: 0.3rem; }
+        .search-box:focus { border-color: var(--ثانوي); }
+        .section-title { font-size: 1.5rem; color: var(--الأساسي); margin-bottom: 1rem; border-right: 4px solid var(--ثانوي); padding-right: 10px; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem; }
-        .card { background: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-right: 4px solid var(--secondary); }
-        .card h3 { color: var(--primary); margin-bottom: 0.8rem; font-size: 1.2rem; }
-        .card p { font-size: 0.95rem; color: #555; }
-        .contact-info { background: var(--primary); color: #fff; padding: 2rem; border-radius: 8px; text-align: center; margin-top: 3rem; }
-        .contact-info h2 { color: var(--secondary); margin-bottom: 1rem; }
-        .whatsapp-btn { display: inline-block; background: #25d366; color: #fff; padding: 0.8rem 2rem; border-radius: 50px; text-decoration: none; font-weight: bold; margin-top: 1rem; font-size: 1.1rem; box-shadow: 0 4px 10px rgba(37,211,102,0.3); }
-        .whatsapp-float { position: fixed; bottom: 20px; left: 20px; background: #25d366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 1000; text-decoration: none; }
-        footer { text-align: center; padding: 1.5rem; background: #111; color: #aaa; font-size: 0.9rem; margin-top: 3rem; }
+        .card { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 3px solid var(--ثانوي); transition: transform 0.3s; }
+        .card:hover { transform: translateY(-5px); }
+        .card h3 { color: var(--الأساسي); margin-bottom: 0.5rem; font-size: 1.2rem; }
+        .card p { color: #555; font-size: 0.95rem; }
+        .whatsapp-btn { display: block; width: 100%; max-width: 350px; margin: 2rem auto; background: #25d366; color: white; text-align: center; padding: 1rem; border-radius: 50px; text-decoration: none; font-size: 1.2rem; font-weight: bold; box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3); transition: background 0.3s; }
+        .whatsapp-btn:hover { background: #20ba5a; }
+        footer { background: var(--الأساسي); color: white; text-align: center; padding: 1.5rem; margin-top: 3rem; font-size: 0.9rem; border-top: 2px solid var(--ثانوي); }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>مكتب الأستاذ عباس الحسن</h1>
-        <p>عضو نقابة المحامين في سوريا | استشارات قانونية وقضائية متكاملة</p>
+        <h1>مكتب الأستاذ المحامي عباس الحسن</h1>
+        <p>الاستشارات والخدمات القانونية المتكاملة</p>
     </header>
 
     <div class="container">
-        <input type="text" id="searchInput" class="search-box" placeholder="ابحث في التشريعات أو الخدمات القانونية (مثلاً: مدني، عقوبات، أحوال شخصية)..." onkeyup="searchContent()">
+        <!-- محرك البحث -->
+        <input type="text" id="search" class="search-box" placeholder="ابحث عن تشريع، قانون، أو خدمة قانونية..." onkeyup="searchFunction()">
 
-        <div id="contentArea">
-            <div class="section-title">التشريعات والخدمات القانونية</div>
-            <div class="grid" id="servicesGrid">
-                <div class="card">
-                    <h3>القانون المدني</h3>
-                    <p>صياغة العقود، قضايا التعويض، الملكية، والالتزامات المدنية والتجارية.</p>
-                </div>
-                <div class="card">
-                    <h3>قانون الشركات</h3>
-                    <p>تأسيس وترخيص الشركات، النزاعات التجارية، وتسوية الشراكات.</p>
-                </div>
-                <div class="card">
-                    <h3>قانون العقوبات والجزاء</h3>
-                    <p>التمثيل والدفاع في مختلف القضايا الجزائية والجرائم الاقتصادية.</p>
-                </div>
-                <div class="card">
-                    <h3>الأحوال الشخصية</h3>
-                    <p>قضايا الزواج، الطلاق، النفقة، الحضانة، والإرث والتركات.</p>
-                </div>
-                <div class="card">
-                    <h3>أصول المحاكمات المدنية والجزائية</h3>
-                    <p>متابعة الدعاوى القضائية أمام كافة المحاكم على اختلاف درجاتها وأنواعها.</p>
-                </div>
-                <div class="card">
-                    <h3>قانون التنفيذ</h3>
-                    <p>متابعة تنفيذ الأحكام القضائية والسندات الرسمية وتحصيل الحقوق.</p>
-                </div>
-                <div class="card">
-                    <h3>قانون البينات واجتهادات النقض</h3>
-                    <p>تقديم الدفوع القانونية المستندة لأحدث اجتهادات محكمة النقض السورية.</p>
-                </div>
+        <div class="section-title">خدماتنا القانونية</div>
+        <div class="grid" id="servicesGrid">
+            <div class="card">
+                <h3>القضايا المدنية والتجارية</h3>
+                <p>تمثيل قانوني شامل في النزاعات العمالية، العقود، والتجارة.</p>
+            </div>
+            <div class="card">
+                <h3>قضايا الأحوال الشخصية</h3>
+                <p>متابعة قضايا الزواج، الطلاق، النفقة، وحصر الإرث بكل مهنية.</p>
+            </div>
+            <div class="card">
+                <h3>الاستشارات القانونية</h3>
+                <p>تقديم الرأي القانوني الموثوق للأفراد والشركات لحماية حقوقهم.</p>
             </div>
         </div>
 
-        <div class="contact-info">
-            <h2>معلومات الاتصال والمقر الرئيسي</h2>
-            <p><strong>العنوان:</strong> سوريا - السيدة زينب - الشارع الرئيسي - دوار حجيرة</p>
-            <p><strong>هاتف وواتساب مباشر:</strong> 0096394409408</p>
-            <a href="https://wa.me/96394409408" class="whatsapp-btn" target="_blank">تواصل عبر واتساب مباشرة</a>
+        <div class="section-title">موسوعة التشريعات والقوانين</div>
+        <div class="grid" id="lawsGrid">
+            <div class="card">
+                <h3>قانون البينات</h3>
+                <p>القواعد العامة لإثبات الحقوق وطرق الأدلة القانونية.</p>
+            </div>
+            <div class="card">
+                <h3>القانون المدني</h3>
+                <p>تنظيم المعاملات المالية والعقود وحماية الملكية الفردية.</p>
+            </div>
+            <div class="card">
+                <h3>قانون أصول المحاكمات المدنية</h3>
+                <p>تنظيم إجراءات التقاضي ومواعيد الطعن أمام المحاكم.</p>
+            </div>
         </div>
+
+        <!-- زر الواتساب -->
+        <a href="https://wa.me/0096394409408" class="whatsapp-btn" target="_blank">تواصل عبر واتساب مباشرة</a>
     </div>
 
-    <a href="https://wa.me/96394409408" class="whatsapp-float" target="_blank" title="تواصل معنا عبر واتساب">💬</a>
-
     <footer>
-        <p>جميع الحقوق محفوظة © 2026 - مكتب الأستاذ عباس الحسن للمحاماة والاستشارات القانونية</p>
+        <p>سوريا - السيدة زينب - الشارع الرئيسي - دوار حجيرة | هاتف / واتساب: 0096394409408</p>
+        <p>جميع الحقوق محفوظة © 2026 مكتب الأستاذ عباس الحسن</p>
     </footer>
 
     <script>
-        function searchContent() {
-            let input = document.getElementById('searchInput').value.toLowerCase();
-            let cards = document.getElementsByClassName('card');
-            
-            for (let i = 0; i < cards.length; i++) {
-                let text = cards[i].innerText.toLowerCase();
-                if (text.includes(input)) {
-                    cards[i].style.display = "";
-                } else {
-                    cards[i].style.display = "none";
-                }
-            }
+        function searchFunction() {
+            let input = document.getElementById('search').value.toLowerCase();
+            let cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                let text = card.innerText.toLowerCase();
+                card.style.display = text.includes(input) ? "block" : "none";
+            });
         }
     </script>
 </body>
